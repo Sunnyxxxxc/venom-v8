@@ -38,11 +38,11 @@ def install_requirements():
 install_requirements()
 
 # 🎛️ Telegram API token (replace with your actual token)
-TOKEN = '7424479555:AAGtNAbqXax_b3b--QnGYi5_XwBbQNw'
+TOKEN = '6703154884:AAGoGLj7ayhfq45jWyf7Kzh6bNiVPRr8kHY'
 bot = telebot.TeleBot(TOKEN, threaded=False)
 
 # 🛡️ List of authorized user IDs (replace with actual IDs)
-AUTHORIZED_USERS = [5588464519]
+AUTHORIZED_USERS = [6892475139]
 
 # 🌐 Global dictionary to keep track of user attacks
 user_attacks = {}
@@ -129,7 +129,7 @@ def start(message):
             "9. Be aware of the consequences of your actions! ⚖️\n"
             "10. Stay within the limits and play fair! 🤗\n"
             "💡 Follow the rules and let's enjoy gaming together! 🎉\n"
-            "📞 Contact the owner on Instagram and Telegram: @venomXcrazy\n"
+            "📞 Contact the owner on Instagram and Telegram: @JAAT_YT/n"
             "☠️ To see the Telegram Bot Command type: /help"
             "👤 To find your user ID type: /id"
         )
@@ -141,7 +141,7 @@ def attack(message):
     user_id = message.from_user.id
     log_command(user_id, '/attack')
     if user_id not in AUTHORIZED_USERS:
-        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @venomXcrazy")
+        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @JAAT_YT")
         return
 
     # Parse target IP and port from the command ︵‿︵‿︵‿︵ ⋆.˚🦋༘⋆
@@ -182,7 +182,7 @@ def stop(message):
     user_id = message.from_user.id
     log_command(user_id, '/stop')
     if user_id not in AUTHORIZED_USERS:
-        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @venomXcrazy")
+        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @JAAT_YT")
         return
 
     stop_attack(user_id)
@@ -225,7 +225,7 @@ def rules(message):
 @bot.message_handler(commands=['owner'])
 def owner(message):
     log_command(message.from_user.id, '/owner')
-    bot.send_message(message.chat.id, "📞 Contact the owner: @venomXcrazy")
+    bot.send_message(message.chat.id, "📞 Contact the owner: @JAAT_YT")
 
 # 💬 Command handler for /uptime. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁
 @bot.message_handler(commands=['uptime'])
